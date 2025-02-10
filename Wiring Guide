@@ -1,0 +1,42 @@
+This is a wiring guide for what we have going on.
+
+output pins on the Arduino...
+
+
+PART 1 - arduino and motor controller logic connections
+[8,9,10,11,12,13] (all male connectors) 
+These connect to the ENA,IN1,IN2 and ENB, EN3,EN4 MALE connectors on the motor controller.
+
+ENA,IN1,IN2: motor A
+ENA,IN1,IN2: motor B
+
+It doesn't matter if Left/Right get mixed up, that can be fixed in the code.
+
+ENA = 11
+ENB = 10
+These are the PWM supplies
+
+IN1 = 8
+IN2= 9
+These control motor A
+
+IN3 =12
+IN4 =13
+These control motor B
+
+PART 2 - Arduino and motor controller power relations
+Connect the Vin on the Arduino to the 5V power output on the motor controller
+Connect one of the grounds on the arduino (Doesn't matter which) to the Grounnd connection on the motor controller
+
+PART 3 - Arduino and Joystick  relations
+Connect the Arduino A0 and A1 pins to the joystick (It's ok if you mix these up, the code is easy to tweak) 
+Connect an Arduino ground to the joystick ground
+OPTIONAL:
+connect an arduino dc input to the button ( haven't set this up yet)
+Just use that last pin on the joystick and i have it hooked up to pin 7 on the arudino
+
+PART 4 - 9V battery relations
+The positive lead goes to the motor controller power input, the negative lead goes to the third arduino ground. 
+
+PART 5 - the motors hook up to the side terminals on the motor controller, idk the order check the thing on the slides, you can probably just fuck w it. 
+
